@@ -1,5 +1,5 @@
 resource "awscc_eks_nodegroup" "eks_nodegroup" {
-    cluster_name = awscc_eks_cluster.eks_cluster.name
+    cluster_name = awscc_eks_cluster.main.name
     node_role    = awscc_iam_role.eks_nodegroup_role.arn
     nodegroup_name = "eks_nodegroup"
     scaling_config {
